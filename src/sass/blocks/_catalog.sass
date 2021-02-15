@@ -33,7 +33,12 @@
         div
             transform: skewX(25deg)
     &__content
+        display: none
         margin-top: 60px
+        &_active
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
 
     &-item
         padding: 20px 20px 26px 20px
@@ -42,6 +47,8 @@
         border-style: solid
         width: 300px
         min-height: 440px
+        overflow: hidden
+        margin-bottom: 20px
 
         &__img
             max-width: 100%
@@ -90,4 +97,56 @@
             font-size: 20px
             color: rgb(5, 5, 5)
             font-weight: 700
-        
+        &__wrapper
+            display: flex
+            width: calc(200% + 40px)
+        &__content
+
+            transition: 0.5s all
+            margin-right: 0px
+            width: 50%
+            transform: translateX(-100%)
+            &_active
+                margin-right: 20px
+                transform: translateX(0%)
+        &__list
+            position: relative
+            transition: 0.5s all
+            width: 50%
+            margin-left: 0px
+            transform: translateX(0%)
+            padding-right: 20px
+            padding-left: 19px
+            margin-bottom: 0
+            list-style-type: none
+            &_active
+                transform: translateX(-100%)
+                margin-left: 0px
+            li
+                font-size: 14px
+                position: relative
+                color: rgb(85, 85, 85)
+                line-height: 1.2
+                margin-bottom: 20px
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: $main-color
+                    left: -14px
+                    top: 7px
+            
+        &__back
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(calc( -50% - 19px ))
+            display: block
+            color: $main-color
+            font-size: 14px
+            font-weight: 500
+            text-transform: underline
+            text-transform: uppercas
+            &:hover
+                color: $main-color
