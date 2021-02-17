@@ -17,6 +17,23 @@
     .slick-next
         left: auto
         right: -66px
-    .slick-dots
+    ul.slick-dots
         border: none
         background-color: #fff
+        display: flex
+        justify-content: center
+        list-style-type: none
+        li
+            margin: 0 15px
+            button
+                border: none
+                border-radius: 50%
+                background-color: #dfdedee3
+                width: 15px
+                height: 15px
+                font-size: 0px
+                line-height: 0px
+        li.slick-active
+            button
+                background-color: $main-color
+                color: red
