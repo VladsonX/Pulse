@@ -2,8 +2,21 @@
     padding: 81px 0
     &__inner
         position: relative
-        width: 750px
+        // height: 100%
         margin: 0 auto
+        width: 80%
+    &__item
+        text-align: center
+        img
+            height: 50%
+    .slick-track
+        display: flex
+    .slick-list
+        overflow: hidden
+    .slick-initialized .slick-slide
+        display: flex
+        justify-content: center
+
     .slick-prev, .slick-next
         position: absolute
         top: 50%
@@ -23,9 +36,11 @@
         display: flex
         justify-content: center
         list-style-type: none
+        padding-left: 0
         li
             margin: 0 15px
             button
+                transition: 0.3s all ease
                 border: none
                 border-radius: 50%
                 background-color: #dfdedee3
@@ -35,5 +50,6 @@
                 line-height: 0px
         li.slick-active
             button
-                background-color: $main-color
-                color: red
+                transition: 0.3s all ease
+                background-color: transparent
+                border: 1px solid

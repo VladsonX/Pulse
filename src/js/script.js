@@ -2,14 +2,15 @@ $(document).ready(function() {
     $('.carousel__inner').slick({
         speed: 700,
         slidesToShow: 1,
-        variableWidth: true,
+        adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="../icons/fourth_page/chevron-left-solid.svg"</button>',
         nextArrow: '<button type="button" class="slick-next"><img src="../icons/fourth_page/chevron-right-solid.svg"</button>',
         responsive: [{
             breakpoint: 992,
             settings: {
                 dots: true,
-                arrows: false
+                arrows: false,
+                // variableWidth: true,
             }
         }]
     });
@@ -64,7 +65,7 @@ $(document).ready(function() {
                 phone: "Пожалуйста, введите свой номер телефона",
                 email: {
                     required: "Пожалуйста, введите свою почту",
-                    email: 'Невправильно введен адрес почты'
+                    email: 'Неправильно введен адрес почты'
                 }
             }
         });
@@ -73,6 +74,8 @@ $(document).ready(function() {
     validateForms('#consultation form');
     validateForms('#consultation-form');
     validateForms('#order form');
+
+    $('input[name=phone]').mask('+7 (999) 999-99-99');
 
 
 

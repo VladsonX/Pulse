@@ -13,6 +13,10 @@
                 width: 200px
 
 @media (max-width: 992px )
+    .carousel
+        &__inner
+            img
+                width: 80%
     .catalog
         &__content_active
             justify-content: space-around !important
@@ -49,9 +53,18 @@
             justify-content: space-around
 
 @media (max-width: 768px )
-    .carousel
-        &__inner
-            width: 600px
+    .reviews
+        &__client
+            flex-direction: column
+        &__info
+            margin-top: 30px
+            margin-left: 0
+
+    .catalog
+        &__tab
+            width: 139px
+            height: 41px
+            font-size: 13px
     .promo
         padding: 5px 0 5px 0
         &__icons
@@ -108,6 +121,21 @@
             font-size: 25px
 
 @media (max-width: 576px )
+    .footer
+        &__addr
+            font-size: 17px
+        &__phone
+            font-size: 17px
+        &__social-item
+            height: 40px
+            width: 40px
+            img
+                height: 19px
+    .reviews
+        &__photo
+            justify-content: center
+        &__descr
+            text-align: center
     .form-position
         justify-content: center
     .consultation
@@ -136,7 +164,12 @@
         &__link
             margin-top: 20px
 
-@media (max-width: 500px )
+@media (max-width: 546px )
+    .catalog
+        &__tab
+            width: 120px
+            height: 35px
+            font-size: 10px
     .form-position
         .feed-form
             width: 225px
